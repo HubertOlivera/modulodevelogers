@@ -14,7 +14,7 @@
     'website': "https://www.linkedin.com/in/hubert-olivera-246447226/",
     # for the full list
     'category': 'Schools',
-    'version': '16.0',
+    'version': '16.0.0.0.0',
 
     # any module necessary for this one to work correctly
     'depends': ['base'],
