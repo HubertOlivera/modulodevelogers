@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <record id="view_custom_school_teacher_form" model="ir.ui.view">
+            <field name="name">view.custom.school.teacher.form</field>
+            <field name="model">school.teacher</field>
+            <field name="arch" type="xml">
+                <form string="Teachers">
+                    <sheet>
+                        <group name="group_top">
+                            <field name="name" style="width:50%"/>
+                            <field name="profile"/>
+                            <field name="subject_ids"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_custom_school_teacher_tree" model="ir.ui.view">
+            <field name="name">view.custom.school.teacher.tree</field>
+            <field name="model">school.teacher</field>
+            <field name="arch" type="xml">
+                <tree string="Teachers">
+                    <field name="name"/>
+                    <field name="profile"/>
+                    <field name="subject_ids"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

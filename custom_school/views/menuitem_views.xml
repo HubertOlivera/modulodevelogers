@@ -1,0 +1,57 @@
+<odoo>
+  <data>
+        <record id="action_custom_school_student_view" model="ir.actions.act_window">
+            <field name="name">Students</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">school.student</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Students
+                </p>
+                <p>
+                    Click 'Nuevo' para añadir nuevos elementos
+                </p>
+            </field>
+        </record>
+        <record id="action_custom_school_teacher_view" model="ir.actions.act_window">
+            <field name="name">Teachers</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">school.teacher</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Teachers
+                </p>
+                <p>
+                    Click 'Nuevo' para añadir nuevos elementos
+                </p>
+            </field>
+        </record>
+        <record id="action_custom_school_subject_view" model="ir.actions.act_window">
+            <field name="name">Subjects</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">school.subject</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Subjects
+                </p>
+                <p>
+                    Click 'Nuevo' para añadir nuevos elementos
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_custom_school_subject_root" name="Subjects School" sequence="10" action="action_custom_school_subject_view"/>
+
+        <menuitem id="menu_custom_school_subject_categ" name="Subjects School" parent="menu_custom_school_subject_root" sequence="0"/>
+
+        <menuitem id="menu_custom_school_student" name="Students" parent="menu_custom_school_subject_categ" sequence="0"
+                  action="action_custom_school_student_view"/>
+
+        <menuitem id="menu_custom_school_teacher" name="Teachers" parent="menu_custom_school_subject_categ" sequence="1"
+                  action="action_custom_school_teacher_view"/>
+
+  </data>
+</odoo>

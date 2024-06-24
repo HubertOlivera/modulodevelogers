@@ -1,0 +1,38 @@
+<odoo>
+    <data>
+        <record id="view_custom_school_student_form" model="ir.ui.view">
+            <field name="name">view.custom.school.student.form</field>
+            <field name="model">school.student</field>
+            <field name="arch" type="xml">
+                <form string="Students">
+                    <sheet>
+                        <group name="group_top">
+                            <group name="group_left">
+                                <field name="name" style="width:75%"/>
+                                <field name="birth_date" style="width:75%"/>
+                                <field name="age"/>
+                            </group>
+                            <group name="group_right">
+                                <field name="final_exam_grade" style="width:75%"/>
+                            </group>
+                            <field name="subject_ids"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_custom_school_student_tree" model="ir.ui.view">
+            <field name="name">view.custom.school.student.tree</field>
+            <field name="model">school.student</field>
+            <field name="arch" type="xml">
+                <tree string="Student">
+                    <field name="name"/>
+                    <field name="birth_date"/>
+                    <field name="final_exam_grade"/>
+                    <field name="subject_ids"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>
